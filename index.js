@@ -5,22 +5,13 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import axios from "axios";
 import displayTime from "./DateAndTime/displayTime.js";
 import displayDate from "./DateAndTime/displayDate.js";
-import express from "express";
-import product from "./api/product.js";
 
-const app = express();
-
-app.use(express.json({ extended: false }));
-app.use("/", product);
-
-// const app = http.createServer((req, res) => {
-//   res.end("Hello");
-// });
+const app = http.createServer((req, res) => {
+  res.end("Hello");
+});
 
 // schedule.scheduleJob("*/1 * * * *", () => {
-//   axios
-//     .get("https://foreappserver.herokuapp.com/")
-//     .catch((e) => console.error(e));
+//   axios.get("https://foreappserver.vercel.app/").catch((e) => console.error(e));
 // });
 
 schedule.scheduleJob("*/1 * * * *", () => {
